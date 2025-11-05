@@ -46,7 +46,7 @@ module.exports = class Clientes {
         }
 
         if(_nome >= 45){
-            throw new Error("o nome nao pode ter mais de 45 letras");
+            throw new Error("o nome não pode ter mais de 45 letras");
         }
 
         this.#nome = value;
@@ -72,10 +72,11 @@ module.exports = class Clientes {
         }
 
         if(this._telefone > 11){
-            throw new Error("telefone nao pode ter mais de 11 digitos");
+            throw new Error("telefone não pode ter mais de 11 digitos");
         }
 
         this.#telefone = value;
     }
+
 
 }
