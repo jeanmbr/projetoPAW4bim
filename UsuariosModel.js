@@ -5,7 +5,7 @@ module.exports = class Usuarios{
     #senha;
 
     constructor(){
-        console.log("funcionou Usuariuos.constrtuctor()");
+        console.log("funcionou Usuarios.constructor()");
     }
 
     get id(){
@@ -15,7 +15,7 @@ module.exports = class Usuarios{
         const parsed = Number(value);
 
         if(!Number.isInteger(parsed)){
-            throw new Error("id deve ser um numero inteiro");
+            throw new Error("id deve ser um número inteiro");
         }
         if(parsed <= 0){
             throw new Error("id deve ser maior do que 0");
@@ -31,7 +31,7 @@ module.exports = class Usuarios{
             throw new Error("o email deve ser uma string");
         }
         if(value.length < 11){
-            throw new Error("o email deve ter no minimo 11 caracteres");
+            throw new Error("o email deve ter no mínimo 11 caracteres");
         }
         this.#email = value;
     }
@@ -41,8 +41,9 @@ module.exports = class Usuarios{
     }
     set senha(value){
         if(value.length < 3){
-            throw new Error("senha deve ter no minimo 4 caracteres");
+            throw new Error("senha deve ter no mínimo 4 caracteres");
         }
         this.#senha = value;
     }
+
 }
