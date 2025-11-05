@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Autocenter - Carros</title>
+    <link rel="stylesheet" href="css/carros.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Gerenciamento de Carros</h1>
+            <a href="index.html" class="back-btn">← Voltar</a>
+        </header>
+
+        <div class="action-buttons">
+            <button class="btn" data-action="buscar">Buscar Carros</button>
+            <button class="btn" data-action="inserir">Inserir Carro</button>
+            <button class="btn" data-action="alterar">Alterar Carro</button>
+            <button class="btn" data-action="deletar">Deletar Carro</button>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" id="globalSearch" placeholder="Buscar carro por montadora, modelo, placa ou cor...">
+            <button class="btn search-btn">Buscar</button>
+        </div>
+
+        <div class="content-area">
+            <div class="cars-section" id="carsSection">
+                <h3>Carros Cadastrados</h3>
+                <div class="table-container">
+                    <table class="table" id="carsTable">
+                        <thead>
+                            <tr>
+                                <th>Placa</th>
+                                <th>Montadora</th>
+                                <th>Modelo</th>
+                                <th>Cor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dados dos carros serão inseridos aqui -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="client-section" id="clientSection">
+                <h3>Dados do Cliente</h3>
+                <div class="table-container">
+                    <table class="table" id="clientTable">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Telefone</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dados do cliente serão inseridos aqui -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-area" id="actionArea">
+            <!-- Área onde os formulários das ações serão carregados -->
+            <div class="welcome-message">
+                <p>Selecione uma ação acima para começar</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/carros.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+const MeuTokenJWT = require("../http/MeuTokenJWT");
+
+module.exports = class JwtMiddleware {
+    validateToken = (request, response, next) => {
+        const authorization = request.headers.authorization;
+        const jwt = new MeuTokenJWT();
+        const autorizado = jwt.validarToken(authorization);
+
+        if (autorizado === true) {
+            const payload = jwt.payload;
+            const obj = {
+                email: payload.email,
+                role: payload.role,
+                name: payload.name,
+            };
+            request.headers.authorization = jwt.gerarToken(obj);
+            next();
+        } else {
+            response.status(401).send({
+                status: false,
+                msg: "token inválido"
+            });
+        }
+    }
+};
