@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Autocenter - Clientes</title>
+    <link rel="stylesheet" href="css/clientes.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Gerenciamento de Clientes</h1>
+            <a href="index.html" class="back-btn">← Voltar</a>
+        </header>
+
+        <div class="action-buttons">
+            <button class="btn" data-action="buscar">Buscar Clientes</button>
+            <button class="btn" data-action="inserir">Inserir Cliente</button>
+            <button class="btn" data-action="alterar">Alterar Cliente</button>
+            <button class="btn" data-action="deletar">Deletar Cliente</button>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" id="globalSearch" placeholder="Buscar cliente por nome, CPF ou telefone...">
+            <button class="btn search-btn">Buscar</button>
+        </div>
+
+        <div class="action-area" id="actionArea">
+            <!-- Área onde os formulários das ações serão carregados -->
+            <div class="welcome-message">
+                <p>Selecione uma ação acima para começar</p>
+            </div>
+        </div>
+
+        <div class="results-area" id="resultsArea">
+            <!-- Área onde os resultados serão exibidos -->
+        </div>
+    </div>
+
+    <script src="js/clientes.js"></script>
+</body>
+</html>

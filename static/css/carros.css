@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #444;
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: #e0e0e0;
+}
+
+.back-btn {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #555;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.back-btn:hover {
+    background-color: #444;
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: rgb(150, 5, 5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: rgb(170, 15, 15);
+}
+
+.search-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 0.75rem;
+    background-color: #4a4a4a;
+    border: 1px solid #5a5a5a;
+    border-radius: 4px;
+    color: #e0e0e0;
+    font-size: 1rem;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: #7a7a7a;
+}
+
+.search-btn {
+    padding: 0.75rem 1.5rem;
+}
+
+.content-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cars-section, .client-section {
+    background-color: #3a3a3a;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.cars-section h3, .client-section h3 {
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+    font-size: 1.3rem;
+}
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #555;
+}
+
+.table th {
+    background-color: #444;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+}
+
+.table tr {
+    cursor: pointer;
+}
+
+.table tr:hover {
+    background-color: #444;
+}
+
+.table tr.selected {
+    background-color: #555;
+}
+
+.action-area {
+    background-color: #3a3a3a;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.welcome-message {
+    text-align: center;
+    color: #b0b0b0;
+    font-size: 1.1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #4a4a4a;
+    border: 1px solid #5a5a5a;
+    border-radius: 4px;
+    color: #e0e0e0;
+    font-size: 1rem;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: #7a7a7a;
+}
+
+.combobox {
+    position: relative;
+}
+
+.combobox-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #4a4a4a;
+    border: 1px solid #5a5a5a;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+}
+
+.combobox-option {
+    padding: 0.75rem;
+    cursor: pointer;
+    border-bottom: 1px solid #555;
+}
+
+.combobox-option:hover {
+    background-color: #5a5a5a;
+}
+
+.combobox-option:last-child {
+    border-bottom: none;
+}
+
+.error-message {
+    color: #ffcc00;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    display: none;
+    border: 1px solid #ffcc00;
+    padding: 0.25rem;
+    border-radius: 3px;
+}
+
+.confirm-btn {
+    background-color: #d32f2f;
+    margin-top: 1rem;
+}
+
+.confirm-btn:hover {
+    background-color: #f44336;
+}

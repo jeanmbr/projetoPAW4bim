@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #e0e0e0;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(150, 5, 5);
+    color: white;
+    text-decoration: none;
+    padding: 2.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-height: 200px;
+}
+
+.btn:hover {
+    background-color: rgb(170, 15, 15);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-large {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.btn-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
